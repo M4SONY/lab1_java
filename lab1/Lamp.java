@@ -1,88 +1,65 @@
-package Lab1;
+package ua.lvil.iot.lab1;
 
 public class Lamp {
-	private String  manufacturerName;
-    private int power;
-    private String guarantee;
-    private String producingCountry;
-    private int price;
-    private String type;
-    protected String color;
-    protected int size;
-    static int wight = 500;
-    
-    Lamp() {
-    	this.manufacturerName = "Turbo";
-    	this.power = 60;
-    	this.guarantee = "1 year";
-    	this.producingCountry = "China";
-    	this.price = 100;
-    	this.type = "LED";
-    	this.color = "white";
-    	this.size = 100;
-    	
-    }
-    
-    Lamp(
-    		String manufacturerName,
-    		int power,
-    		String guarantee,
-    		String producingCountry,
-    		int price,
-            String type,
-            String color,
-            int size
-           ) {
-    	this.manufacturerName = manufacturerName;
-    	this.power = power;
-    	this.guarantee = guarantee;
-    	this.producingCountry = producingCountry;
-    	this.price = price;
-    	this.type = type;
-    	this.color = color;
-    	this.size = size;
-    }
-    
-    public String toString() {
-    	return "Company name: " + this.manufacturerName + "\n" +
-                "Power: " + this.power + "\n" +
-    			"Guarantee: " + this.guarantee + "\n" +
-                "Producing Country: " + this.producingCountry + "\n" +
-    			"Price: " + this.price + "\n" +
-                "Type: " + this.type + "\n" +
-    			"Color: " + this.color + "\n" +
-                "Size: " + this.size + "\n";
-                
-    }
-    static void printStaticWight() {
-    	System.out.println("Wight " + wight);
-    }
-    
-    public void printWight() {
-    	System.out.println("Wight: " + wight);
-    	}
-    
-    public void resetValues(
-    		String manufacturerName,
-    		int power,
-    		String guarantee,
-    		String producingCountry,
-    		int price,
-    		String type,
-    		String color,
-    		int size
-    		) {
-    	
-    this.manufacturerName = manufacturerName;
-    this.power = power;
-    this.guarantee = guarantee;
-    this.producingCountry = producingCountry;
-    this.price = price;
-    this.type = type;
-    this.color = color;
-    this.size = size;
-    	
-    }
+	private String manufacturerName;
+	private int power;
+	private String guarantee;
+	private String producingCountry;
+	private int price;
+	private String type;
+	protected String color;
+	protected int size;
+	static int wight = 500;
+
+	public Lamp() {
+		this("Turbo", 60, "1 year", "China", 100, "LED", "white", 100);
+
+	}
+
+	public Lamp(String manufacturerName, int power, String guarantee, String producingCountry) {
+		this(manufacturerName, power, guarantee, producingCountry, 0, null, null, 0);
+	}
+
+	public Lamp(String manufacturerName, int power, String guarantee, String producingCountry, int price, String type,
+			String color, int size) {
+		this.manufacturerName = manufacturerName;
+		this.power = power;
+		this.guarantee = guarantee;
+		this.producingCountry = producingCountry;
+		this.price = price;
+		this.type = type;
+		this.color = color;
+		this.size = size;
+	}
+
+	public String toString() {
+		return "Company name: " + this.manufacturerName + "\n" + "Power: " + this.power + "\n" + "Guarantee: "
+				+ this.guarantee + "\n" + "Producing Country: " + this.producingCountry + "\n" + "Price: " + this.price
+				+ "\n" + "Type: " + this.type + "\n" + "Color: " + this.color + "\n" + "Size: " + this.size + "\n";
+
+	}
+
+	static void printStaticWight() {
+		System.out.println("Wight " + wight);
+	}
+
+	public void printWight() {
+		System.out.println("Wight: " + wight);
+	}
+
+	public void resetValues(String manufacturerName, int power, String guarantee, String producingCountry, int price,
+			String type, String color, int size) {
+
+		this.manufacturerName = manufacturerName;
+		this.power = power;
+		this.guarantee = guarantee;
+		this.producingCountry = producingCountry;
+		this.price = price;
+		this.type = type;
+		this.color = color;
+		this.size = size;
+
+	}
 
 	public String getManufacturerName() {
 		return manufacturerName;
@@ -147,7 +124,5 @@ public class Lamp {
 	public void setSize(int size) {
 		this.size = size;
 	}
-    
-    
-    
+
 }
