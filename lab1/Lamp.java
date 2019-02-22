@@ -12,7 +12,7 @@ public class Lamp {
 	static int wight = 500;
 
 	public Lamp() {
-		this("Turbo", 60, "1 year", "China", 100, "LED", "white", 100);
+		this("turbo", 60, "1 year", "China", 100, "LED", "white", 100);
 
 	}
 
